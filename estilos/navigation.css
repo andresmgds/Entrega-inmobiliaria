@@ -1,0 +1,175 @@
+
+
+.desktop-menu,
+.mobile-menu {
+    background-color: #F7F7F7;
+}
+
+/* Menu desktop */
+.desktop-menu {
+    padding: 0 40px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.desktop-menu .logo,
+.mobile-menu .logo {
+    height: 50px;
+    margin: 10px;
+}
+
+.desktop-menu > nav > a {
+    color: #454747;
+    padding: 7px;
+    margin-left: 6px;
+    transition: background-color ease .3s;
+}
+
+.desktop-menu > nav > a:hover {
+    text-decoration: none;
+    color: #9B9B9B;
+    transition: color ease .3s;
+}
+
+.desktop-menu > nav > a.login-button {
+    margin-left: 14px;
+    background-color: #F2CD5C;
+    color: #78846e;
+}
+
+
+.desktop-menu > nav > a.login-button:hover {
+    text-decoration: none;
+    margin-left: 14px;
+    background-color: #F4DFA4;
+    transition: background-color ease .3s;
+}
+
+.desktop-menu-actions {    
+    margin-right: 40px;
+    display: flex;
+    align-items: center;
+    margin-right: 12px;
+}
+
+.desktop-menu > .container-logo-mobileButton > button {
+    width: 40px;
+    margin: 20px 20px 0 0;
+    padding: 10px;
+    font-size: 15px;
+    color: #78846e;
+    border: none;
+    display: none;
+}
+
+
+/* Menu mobile */
+.mobile-menu {
+    display: none;
+}
+
+.mobile-menu > button:focus {
+    outline: none;
+}
+
+.mobile-menu-actions {
+    display: none;
+}
+
+.mobile-menu-actions > a {
+    padding: 15px;
+    background-color: #8b9a7e;
+    transition: background-color ease .4s;
+    border-bottom: 1px solid #798f67;
+}
+
+.mobile-menu-actions > a:hover {
+    background-color: #97a58a;
+    transition: background-color ease .3s;
+}
+
+@media (max-width: 800px) {
+    /*.desktop-menu {
+       display: none;
+    }
+
+    .mobile-menu {
+        display: flex;
+        justify-content: space-between;
+    }
+
+   */
+
+   .carousel-control-prev, .carousel-control-next {
+    display: none;
+    }    
+
+
+   .desktop-menu > nav > a {
+    padding: 20px;
+    width: 100%;
+    text-align: center;
+    color: #fff;
+    border: none;
+    background: none;
+    }
+
+
+    .desktop-menu > nav > a:not(:last-child) {
+        border-bottom: white 1px solid;
+    }
+
+    .desktop-menu > nav > a.login-button {
+        margin-left: 14px;
+        background-color: none;
+        color: #78846e;
+    }
+
+    .container-logo-mobileButton {
+        display: block;
+        width: 100%;     
+    }
+
+    .desktop-menu > nav > a.login-button {
+        background-color: transparent;
+        color: #fff;
+        border-bottom: white 1px solid;
+    }
+
+    .desktop-menu > nav > a.login-button:hover {
+        background-color: #78846e;
+        transition: background-color ease .3s;
+    }
+
+
+
+    .desktop-menu {        
+        padding: 0;
+        display: block;
+    }
+    .desktop-menu > .container-logo-mobileButton > button {
+        display: block;
+        margin: 20px 20px 0 0;
+        float: right;
+    }
+    
+    .desktop-menu-actions {        
+        max-height: 0;
+        overflow: hidden;
+        background-color: #798f67;
+        opacity: 0.95;
+        width: 100%;
+        display: flex;
+        flex-direction: column-reverse;        
+        position: fixed;
+        z-index: 10;
+        -webkit-transition: max-height 0.5s ease;
+        transition: max-height 0.5s ease;
+    }
+
+    .desktop-menu-actions.opened {
+        max-height: 340px;   
+        -webkit-transition: max-height 0.5s ease;
+        transition: max-height 0.5s ease;
+    }
+}

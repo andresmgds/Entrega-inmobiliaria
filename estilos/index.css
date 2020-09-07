@@ -1,0 +1,123 @@
+/* Imagen de fondo con caja de busqueda */
+.search-container {
+    height: 80vh;
+    padding-top: 25vh;
+    background-image: url('../imagenes/home/homeBackground.jpg');    
+    background-repeat:no-repeat;
+    background-position:center;
+    color: #fff;
+}
+
+.search-section {
+    padding-top: 80px;
+    padding-bottom: 170px;
+    text-align: center;
+}
+
+.search-section h1 {
+    font-size: 2.8rem;
+    margin-bottom: 20px;
+}
+
+.search-section input {
+    margin-right: 15px;
+    border-radius: 3px;
+    padding: 10px;
+    width: 280px;
+}
+
+.search-section button {
+    background-color: #84D5E8;
+    border: none;
+    padding: 10px 40px;
+    font-weight: bold;
+}
+
+.search-section button:hover {
+    background-color: #A7E8F2;
+    transition: background-color ease .3s;
+}
+
+.carouselContainer {
+    padding: 15px 0;
+}
+
+.carousel-inner {    
+    height: 120px;
+}
+
+.quick-filters-section {
+    height: 300px;
+    background-color: chocolate;
+}
+
+.fa-angle-left, .fa-angle-right {
+    font-size: 40px;    
+    color: black;
+}
+
+#carouselInmobiliarias {
+    height: 120px;
+}
+
+/*Margen controladores slider*/
+.carousel-control-prev {
+    left: -50px;
+}
+
+.carousel-control-next {
+    right: -50px;
+}
+
+/*Pantallas medianas*/
+
+
+@media (min-width: 768px) {
+
+    .carousel-inner .carousel-item-right.active,
+    .carousel-inner .carousel-item-next {
+        transform: translateX(50%);
+    }
+
+    .carousel-inner .carousel-item-left.active,
+    .carousel-inner .carousel-item-prev {
+        transform: translateX(-50%);
+    }
+}
+
+/* Pantallas grandes*/
+@media (min-width: 992px) {
+
+    .carousel-inner .carousel-item-right.active,
+    .carousel-inner .carousel-item-next {
+        transform: translateX(33%);
+    }
+
+    .carousel-inner .carousel-item-left.active,
+    .carousel-inner .carousel-item-prev {
+        transform: translateX(-33%);
+    }
+}
+
+
+/* Pantallas chicas*/
+@media (max-width: 768px) {
+    .carousel-inner .carousel-item>div {
+        display: none;
+    }
+
+    .carousel-inner .carousel-item>div:first-child {
+        display: block;
+    }
+}
+
+.carousel-inner .carousel-item.active,
+.carousel-inner .carousel-item-next,
+.carousel-inner .carousel-item-prev {
+    display: flex;
+}
+
+.carousel-inner .carousel-item-right,
+.carousel-inner .carousel-item-left {
+    transform: translateX(0);
+}

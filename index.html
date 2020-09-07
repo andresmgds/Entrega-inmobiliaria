@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="es">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+        <!-- Fontawesome -->
+        <script src="https://kit.fontawesome.com/96f039ea8c.js" crossorigin="anonymous"></script>
+
+        <!-- Google Fonts -->
+        <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+
+        <!-- Custom styles -->
+        <link rel="stylesheet" href="estilos/general.css">
+        <link rel="stylesheet" href="estilos/navigation.css">
+        <link rel="stylesheet" href="estilos/text.css">
+        <link rel="stylesheet" href="estilos/index.css">
+
+        <title>quierocasa</title>
+    </head>
+    <body onload="quickFilters()">
+        <header class="desktop-menu">
+            <div class="container-logo-mobileButton">
+                <a href="index.html">
+                    <img class="logo" src="imagenes/logo_quieroCasa.svg">
+                </a>
+
+                <button onclick="toggleMobileMenu()">
+                    <i class="fas fa-bars fa-lg"></i>
+                </button>
+            </div>
+            
+            <nav class="desktop-menu-actions">
+                <a href="inmuebles.html">Venta</a>
+                <a href="inmuebles.html">Alquiler</a>
+                <a href="inmuebles.html">Proyectos</a>
+                <a href="inmobiliarias.html">Inmobiliarias</a>
+                <a class="login-button" href="inicio-de-sesion.html">Iniciar Sesión</a>
+            </nav>
+        </header>
+
+        <!-- Contenido principal -->
+        <main>
+            <!-- TODO: Banner grande con texto y caja de busqueda -->
+
+            <div class="search-container w-100">
+                <div class="search-section">
+                    <!-- TODO: Texto para introducir al usuario -->
+                    <!-- TODO: Caja de busqueda + menus desplegables -->
+                    <h1>Tu próximo hogar. Fácil y rápido.</h1>
+                    <input type="text" placeholder="Ingrese su búsqueda aqui ...">
+                    <button onclick="search()">Buscar</button>
+                </div>
+            </div>
+            <!-- Seccion de venta de banners -->
+
+            <div class="carouselContainer container text-center">
+                <div class="row mx-auto my-auto">          
+                    <div id="carouselInmobiliarias" class="carousel slide w-100" data-ride="carousel">
+                        <div class="carousel-inner w-100" role="listbox">
+                            <div class="carousel-item active">
+                                <div class="col-lg-4 col-md-6">
+                                    <img class="img-fluid" src="imagenes/home/inmobCarriquiry.jpg">
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="col-lg-4 col-md-6">
+                                    <img class="img-fluid" src="imagenes/home/inmobAmericana.jpg">
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="col-lg-4 col-md-6">
+                                    <img class="img-fluid" src="imagenes/home/inmobCaldero.jpg">
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="col-lg-4 col-md-6">
+                                    <img class="img-fluid" src="imagenes/home/inmobEtxe.jpg">
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="col-lg-4 col-md-6">
+                                    <img class="img-fluid" src="imagenes/home/inmobPtaBallera.jpg">
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="col-lg-4 col-md-6">
+                                    <img class="img-fluid" src="imagenes/home/inmobZenestate.jpg">
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <a class="carousel-control-prev w-auto" href="#carouselInmobiliarias" role="button" data-slide="prev">
+                            <i class="fa fa-angle-left"></i>
+                        </a>
+                        <a class="carousel-control-next w-auto" href="#carouselInmobiliarias" role="button" data-slide="next">
+                            <i class="fa fa-angle-right"></i>
+                        </a>
+
+                    </div>
+                </div>
+            </div>
+
+            <!-- TODO: Filtros pre-armados para busquedas tipicamente utilizadas por los usuarios -->
+            <div class="quick-filters-section"></div>
+        </main>
+
+        <!-- Pie de pagina -->
+        <footer>
+            <!-- TODO: Links a redes sociales -->
+            <!-- TODO: Copyright con fecha dinamica -->
+        </footer>
+
+
+         <!-- Template propiedad -->
+         <template id="item-template">
+            <div class="col-sm-12 col-md-6">
+                <div class="item-card">
+                    <!-- Carousel -->
+                    <div class="item-images">
+                        <div class="carousel slide" data-ride="carousel">
+                            <div class="carousel-inner"></div>
+
+                            <!-- Boton para ir a la imagen anterior -->
+                            <a class="carousel-control-prev" role="button" data-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="sr-only">Previous</span>
+                            </a>
+
+                            <!-- Boton para ir a la siguiente imagen -->
+                            <a class="carousel-control-next" role="button" data-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="sr-only">Next</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="item-details">
+                        <h5 class="item-title"></h5>
+                        <div class="item-price"></div>
+                    </div>
+                </div>
+            </div>
+        </template>
+
+
+        <!-- jQuery, Popper.js, Bootstrap JS -->
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+
+        <!-- Custom scripts -->
+        <script src="scripts/menu.js"></script>
+        <script src="scripts/carouselInmobiliarias.js"></script>
+        <script src="scripts/footer.js"></script>
+        <script src="scripts/search.js"></script>
+        <script src="scripts/quickFilters.js"></script>
+    </body>
+</html>
