@@ -1,0 +1,35 @@
+const inmuebles = [
+    { 
+        id: 1,
+        ...
+    },
+    { 
+        id: 2,
+        ...
+    },
+    { 
+        id: 3,
+        ...
+    },
+    { 
+        id: 2,
+        ...
+    }
+]
+
+let inmuebleAMostrar
+
+inmuebleAMostrar = inmuebles.find(function (inmueble) {
+    return inmueble.id === 2
+})
+
+inmuebleAMostrar = inmuebles.filter(function (inmueble) {
+    return inmueble.id === 2
+})[0]
+
+for (let index = 0; index < inmuebles.length; index++) {
+    if (inmuebles[index].id === 2) {
+        inmuebleAMostrar = inmuebles[index]
+        break
+    }
+}

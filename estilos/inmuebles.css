@@ -4,7 +4,16 @@
     margin-bottom: 40px;
 }
 
-.filters,
+.filters {
+    position: fixed;
+    max-height: 80vh;
+    overflow: hide;
+    background-color: #e6ebdc;
+    border-radius: 4px;
+    padding: 15px;
+}
+
+
 .search-result > h4 {
     background-color: #e6ebdc;
     border-radius: 4px;

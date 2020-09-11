@@ -47,9 +47,26 @@
 }
 
 .quick-filters-section {
-    height: 300px;
-    background-color: chocolate;
+    padding: 20px 0;
 }
+
+
+.quick-filters-section .card {
+    margin: 10px 0;
+    padding-bottom: 10px;
+    height: 400px;
+    box-shadow: 4px 4px 5px #aaaaaa;
+    border-radius: 12px;
+}
+
+.quick-filters-section img {
+     width:100%;
+     height:auto;
+}
+
+.linkCardContainer{
+    text-align: center;
+}  
 
 .fa-angle-left, .fa-angle-right {
     font-size: 40px;    
@@ -68,6 +85,20 @@
 .carousel-control-next {
     right: -50px;
 }
+
+@media (max-width: 800px) {
+    .quick-filters-section {
+        padding: 0 15px;
+    }
+
+    .card img {
+        max-height: 200px;
+    }
+}
+
+
+
+
 
 /*Pantallas medianas*/
 

@@ -56,132 +56,139 @@
         </nav>
 
         <main class="container">
-            <div class="row">
-                <div class="col-sm-12 col-md-3 filters">
-                    <h4>
-                        Filtros
-                    </h4>
+                <div class="row">               
 
-                    <button onclick="applyFilter()">Aplicar filtro</button>
+                    <div class="col-sm-12 col-md-3 filters">
+                        <div>   
 
-                    <hr>
+                            <h4>
+                                Filtros
+                            </h4>
 
-                    <!-- Tipo de operacion -->
-                    <p>Tipo de operacion</p>
-                    <div class="form-check">
-                        <input class="form-check-input" type="radio" name="tipoDeOperacion" id="tipoDeOperacionVenta" value="Venta">
-                        <label class="form-check-label" for="tipoDeOperacionVenta">
-                            Venta
-                        </label>
+                            <button onclick="applyFilter()">Aplicar filtro</button>
+
+                            <hr>
+
+                            <!-- Tipo de operacion -->
+                            <p>Tipo de operacion</p>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="tipoDeOperacion" id="tipoDeOperacionVenta" value="Venta">
+                                <label class="form-check-label" for="tipoDeOperacionVenta">
+                                    Venta
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="tipoDeOperacion" id="tipoDeOperacionAlquiler" value="Alquiler">
+                                <label class="form-check-label" for="tipoDeOperacionAlquiler">
+                                    Alquiler
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="tipoDeOperacion" id="tipoDeOperacionAlquilerTemporal" value="AlquilerTemporal">
+                                <label class="form-check-label" for="tipoDeOperacionAlquilerTemporal">
+                                    Alquiler temporal
+                                </label>
+                            </div>
+
+                            <hr>
+
+                            <!-- Tipo de propiedad -->
+                            <p>Tipo de propiedad</p>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="tipoDePropiedadCasa">
+                                <label class="form-check-label" for="tipoDePropiedadCasa">
+                                    Casa
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="tipoDePropiedadApartamento">
+                                <label class="form-check-label" for="tipoDePropiedadApartamento">
+                                    Apartamento
+                                </label>
+                            </div>
+
+                            <hr>
+
+                            <!-- Rango de precios -->
+
+                            <!-- Metros edificados -->
+
+                            <!-- Metros totales -->
+
+                            <!-- Dormitorios -->
+
+                            <!-- Banios -->
+
+                            <!-- Estado -->
+                            <p>Estado</p>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="estadoEnConstruccion">
+                                <label class="form-check-label" for="estadoEnConstruccion">
+                                    En construccion
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="estadoAEstrenar">
+                                <label class="form-check-label" for="estadoAEstrenar">
+                                    A estrenar
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="estadoUsado">
+                                <label class="form-check-label" for="estadoUsado">
+                                    Usado
+                                </label>
+                            </div>
+
+                            <hr>
+
+                            <!-- Amenities -->
+                            <p>Amenities</p>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="amenityGaraje">
+                                <label class="form-check-label" for="amenityGaraje">
+                                    Garaje
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="amenityJardin">
+                                <label class="form-check-label" for="amenityJardin">
+                                    Jardin
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="amenitySeguridad">
+                                <label class="form-check-label" for="amenitySeguridad">
+                                    Seguridad
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="amenityPiscina">
+                                <label class="form-check-label" for="amenityPiscina">
+                                    Piscina
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="amenityAmueblado">
+                                <label class="form-check-label" for="amenityAmueblado">
+                                    Amueblado
+                                </label>
+                            </div>
+                        </div>    
                     </div>
-                    <div class="form-check">
-                        <input class="form-check-input" type="radio" name="tipoDeOperacion" id="tipoDeOperacionAlquiler" value="Alquiler">
-                        <label class="form-check-label" for="tipoDeOperacionAlquiler">
-                            Alquiler
-                        </label>
-                    </div>
-                    <div class="form-check">
-                        <input class="form-check-input" type="radio" name="tipoDeOperacion" id="tipoDeOperacionAlquilerTemporal" value="AlquilerTemporal">
-                        <label class="form-check-label" for="tipoDeOperacionAlquilerTemporal">
-                            Alquiler temporal
-                        </label>
-                    </div>
 
-                    <hr>
 
-                    <!-- Tipo de propiedad -->
-                    <p>Tipo de propiedad</p>
-                    <div class="form-check">
-                        <input class="form-check-input" type="checkbox" value="" id="tipoDePropiedadCasa">
-                        <label class="form-check-label" for="tipoDePropiedadCasa">
-                            Casa
-                        </label>
-                    </div>
-                    <div class="form-check">
-                        <input class="form-check-input" type="checkbox" value="" id="tipoDePropiedadApartamento">
-                        <label class="form-check-label" for="tipoDePropiedadApartamento">
-                            Apartamento
-                        </label>
-                    </div>
+                    <div class="col-sm-12 col-md-9 offset-md-3 search-result">
+                        <h4>
+                            Resultado de la busqueda
+                        </h4>
+                        
+                        <div class="row items-container">
+                            <!-- Aqui van los inmuebles -->
+                        </div>                     
 
-                    <hr>
-
-                    <!-- Rango de precios -->
-
-                    <!-- Metros edificados -->
-
-                    <!-- Metros totales -->
-
-                    <!-- Dormitorios -->
-
-                    <!-- Banios -->
-
-                    <!-- Estado -->
-                    <p>Estado</p>
-                    <div class="form-check">
-                        <input class="form-check-input" type="checkbox" value="" id="estadoEnConstruccion">
-                        <label class="form-check-label" for="estadoEnConstruccion">
-                            En construccion
-                        </label>
-                    </div>
-                    <div class="form-check">
-                        <input class="form-check-input" type="checkbox" value="" id="estadoAEstrenar">
-                        <label class="form-check-label" for="estadoAEstrenar">
-                            A estrenar
-                        </label>
-                    </div>
-                    <div class="form-check">
-                        <input class="form-check-input" type="checkbox" value="" id="estadoUsado">
-                        <label class="form-check-label" for="estadoUsado">
-                            Usado
-                        </label>
-                    </div>
-
-                    <hr>
-
-                    <!-- Amenities -->
-                    <p>Amenities</p>
-                    <div class="form-check">
-                        <input class="form-check-input" type="checkbox" value="" id="amenityGaraje">
-                        <label class="form-check-label" for="amenityGaraje">
-                            Garaje
-                        </label>
-                    </div>
-                    <div class="form-check">
-                        <input class="form-check-input" type="checkbox" value="" id="amenityJardin">
-                        <label class="form-check-label" for="amenityJardin">
-                            Jardin
-                        </label>
-                    </div>
-                    <div class="form-check">
-                        <input class="form-check-input" type="checkbox" value="" id="amenitySeguridad">
-                        <label class="form-check-label" for="amenitySeguridad">
-                            Seguridad
-                        </label>
-                    </div>
-                    <div class="form-check">
-                        <input class="form-check-input" type="checkbox" value="" id="amenityPiscina">
-                        <label class="form-check-label" for="amenityPiscina">
-                            Piscina
-                        </label>
-                    </div>
-                    <div class="form-check">
-                        <input class="form-check-input" type="checkbox" value="" id="amenityAmueblado">
-                        <label class="form-check-label" for="amenityAmueblado">
-                            Amueblado
-                        </label>
                     </div>
                 </div>
-                <div class="col-sm-12 col-md-9 search-result">
-                    <h4>
-                        Resultado de la busqueda
-                    </h4>
-                    
-                    <div class="row items-container">
-                        <!-- Aqui van los inmuebles -->
-                    </div>
-                </div>
-            </div>
         </main>
 
         <footer></footer>
