@@ -102,8 +102,21 @@ function getDataFromAPI(filtros) {
             const conGaraje = filtros.amenities.garaje ? propiedad.amenities.garaje : true
             const tieneSeguridad = filtros.amenities.seguridad ? propiedad.amenities.seguridad : true
 
+            //Precio rango
+            let dentroDelRangoDePrecio
+                    
+            if (filtros.valoresDePropiedad.valorMenor!='' && filtros.valoresDePropiedad.valorMayor!='') {
+                if (filtros.valoresDePropiedad.valorMenor>filtros.valoresDePropiedad.valorMayor || filtros.valoresDePropiedad.valorMenor<0 || filtros.valoresDePropiedad.valorMayor<0 ) {
+                    console.log('VALORES MAL INGRESADOS')
+                } else if (filtros.valoresDePropiedad.valorMenor <= propiedad.precio.monto && propiedad.precio.monto <= filtros.valoresDePropiedad.valorMayor)  {
+                    dentroDelRangoDePrecio = true
+                }
+            } else {
+                dentroDelRangoDePrecio = true
+            }
             // Resultado del filtro
-            return laOperacionCoincide && mostrarCasas && mostrarApartamentos && conGaraje && tieneSeguridad
+            
+            return  laOperacionCoincide && mostrarCasas && mostrarApartamentos && conGaraje && tieneSeguridad && dentroDelRangoDePrecio
         }
     )
 
@@ -123,6 +136,10 @@ function applyFilter() {
 
     // Obtenemos los valores de los filtros
     const filtros = {
+        valoresDePropiedad : {
+           valorMenor : document.querySelector('#valorDesde').value,
+           valorMayor : document.querySelector('#valorHasta').value
+        },
         tipoDeOperacion: document.querySelector('input[name="tipoDeOperacion"]:checked').value,
         tipoDePropiedad: {
             casa: document.querySelector('#tipoDePropiedadCasa').checked,
@@ -139,7 +156,7 @@ function applyFilter() {
             seguridad: document.querySelector('#amenitySeguridad').checked,
             piscina: document.querySelector('#amenityPiscina').checked,
             amueblado: document.querySelector('#amenityAmueblado').checked
-        }
+        }        
     }
 
     // Obtenemos la lista de propiedades a mostrar
@@ -193,6 +210,7 @@ function applyFilter() {
 
             // Agregamos el elemento clonado como hijo del contenedor de cards
             container.appendChild(itemClone)
+
         }
     } else {
         // TODO: Mostrar mensaje de ayuda al usuario

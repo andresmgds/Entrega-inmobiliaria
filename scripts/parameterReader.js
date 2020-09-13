@@ -7,7 +7,7 @@ function readUrlParameters() {
         document.querySelector("#tipoDeOperacionAlquilerTemporal").checked = true
     } else {
         document.querySelector("#tipoDeOperacionVenta").checked = true
-    }
+    } 
 
     document.querySelector("#tipoDePropiedadCasa").checked = parametrosDeUrl.get('tipoDePropiedadCasa') === 'true'
     document.querySelector("#tipoDePropiedadApartamento").checked = parametrosDeUrl.get('tipoDePropiedadApartamento') === 'true'

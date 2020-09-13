@@ -58,7 +58,7 @@
         <main class="container">
                 <div class="row">               
 
-                    <div class="col-sm-12 col-md-3 filters">
+                    <div class="col-sm-12 col-md-3 sticky-top filters">
                         <div>   
 
                             <h4>
@@ -66,6 +66,20 @@
                             </h4>
 
                             <button onclick="applyFilter()">Aplicar filtro</button>
+
+                            <hr>
+
+
+                            <!-- Valor de operacion -->
+                            <p>Por valor</p>
+                            
+                            <div class="">
+                                
+                                <input type="text" id="valorDesde" placeholder="Ingresar valor">Desde</input>
+                                <input type="text" id="valorHasta" placeholder="Ingresar valor">Hasta</input>
+
+
+                            </div>
 
                             <hr>
 
@@ -174,11 +188,12 @@
                                     Amueblado
                                 </label>
                             </div>
-                        </div>    
+                        </div> 
+                        
                     </div>
 
 
-                    <div class="col-sm-12 col-md-9 offset-md-3 search-result">
+                    <div class="col-sm-12 col-md-9 search-result">
                         <h4>
                             Resultado de la busqueda
                         </h4>
@@ -190,6 +205,11 @@
                     </div>
                 </div>
         </main>
+
+
+        <button class="mobileFiltersButton" onclick="toggleFiltersPosition()">
+           <span>F</span>
+        </button>
 
         <footer></footer>
 
@@ -241,5 +261,6 @@
         <script src="scripts/footer.js"></script>
         <script src="scripts/parameterReader.js"></script>
         <script src="scripts/search.js"></script>
+        <script src="scripts/mobileFilters.js"></script>
     </body>
 </html>

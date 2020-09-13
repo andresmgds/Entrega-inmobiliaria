@@ -1,5 +1,4 @@
 
-
 .desktop-menu,
 .mobile-menu {
     background-color: #F7F7F7;
@@ -62,7 +61,6 @@
     display: none;
 }
 
-
 /* Menu mobile */
 .mobile-menu {
     display: none;
@@ -89,21 +87,10 @@
 }
 
 @media (max-width: 800px) {
-    /*.desktop-menu {
-       display: none;
-    }
-
-    .mobile-menu {
-        display: flex;
-        justify-content: space-between;
-    }
-
-   */
 
    .carousel-control-prev, .carousel-control-next {
     display: none;
     }    
-
 
    .desktop-menu > nav > a {
     padding: 20px;
@@ -113,7 +100,6 @@
     border: none;
     background: none;
     }
-
 
     .desktop-menu > nav > a:not(:last-child) {
         border-bottom: white 1px solid;
@@ -140,8 +126,6 @@
         background-color: #78846e;
         transition: background-color ease .3s;
     }
-
-
 
     .desktop-menu {        
         padding: 0;
